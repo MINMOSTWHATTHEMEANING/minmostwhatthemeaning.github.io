@@ -6,115 +6,39 @@
     <title>Bass's Digital Graveyard 💀🔥</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        body {
-            background-color: #000;
-            color: #0f0; /* Green Text */
-            font-family: monospace;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden; 
-        }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 2px solid #0f0;
-            border-radius: 10px;
-        }
-        h1, h2, h3 {
-            text-align: center;
-            text-shadow: 0 0 5px #0f0;
-        }
-        h1 { font-size: 3em; }
-        h2 { font-size: 2em; }
-        h3 { font-size: 1.5em; }
-        p {
-            line-height: 1.6;
-            text-indent: 2em;
-        }
-        a {
-            color: #0f0;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        /* Glitch Effect */
-        .glitch {
-            position: relative;
-            animation: glitch 1s linear infinite;
-        }
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
-        }
-        .skull {
-            text-align: center;
-            font-size: 2em;
-            margin: 20px 0;
-            animation: flicker 2s linear infinite;
-        }
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border: 2px solid #0f0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px #0f0;
-        }
-
-        blockquote {
-            border-left: 5px solid #0f0;
-            padding-left: 20px;
-            margin-left: 20px;
-            font-style: italic;
-        }
-
-        .creepy-text {
-            font-family: 'Creepster', cursive;
-            font-size: 1.2em;
-            animation: textFlicker 3s infinite alternate; 
-        }
-
-        @keyframes textFlicker {
-            0% { opacity: 1; }
-            100% { opacity: 0.6; } 
-        }
-
-        .section {
-            margin-bottom: 30px; 
-        }
-        .retro-text {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.5em;
-            color: #f00; 
-            text-shadow: 0 0 5px #f00; 
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            grid-gap: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border: 2px solid #0f0;
-            border-radius: 5px;
-            box-shadow: 0 0 10px #0f0;
-        }
-        .game-description { 
+        /* ... (styles from previous example) ... */
+        .game-description {
             margin-bottom: 20px;
         }
+         .game-info { /* Add styles for game info text */
+             text-align: center;
+             margin-top: 10px;
+             color: #ccc; /* Lighter text color for game info */
+         }
+
+         .game-credits {
+             text-align: left; /* Align credits to the left */
+             margin-top: 20px;
+             font-size: 0.8em; /* Slightly smaller font size for credits */
+             color: #888; /* Even lighter text color for credits */
+         }
+
+        .game-credits a {
+            color: #0f0; /* Keep link color green */
+            text-decoration: none;
+        }
+
+        .game-credits a:hover {
+             text-decoration: underline;
+        }
+         .download-link {
+             display: block; /* Make the link a block element */
+             text-align: center; /* Center the link */
+             margin-top: 20px;  /* Add margin above the link */
+             font-size: 1.2em; /* Make the link text larger */
+         }
+
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -124,38 +48,45 @@
     <div class="container">
         <h1 class="glitch">Bass's Digital Graveyard 💀🔥</h1>
 
-        <p>Yo! Bass here. 💀🔥  Welcome to my digital graveyard. I'm a game dev, AI enthusiast, and all-around  weird guy.  😎 This is where my creations come to life (or undeath).  🎮🤖👻</p>
+        <p>Yo! Bass here. 💀🔥  Welcome to my digital graveyard. I'm a game dev, AI enthusiast, and all-around weird guy.  😎 This is where my creations come to life (or undeath).  🎮🤖👻</p>
 
-        <div class="section">
-            <h2 class="glitch">Featured Project: Haunted Hole 🎮🪦</h2>
 
-            <div class="game-description">  
-                <p>Buried alive in a creepy, pixelated graveyard, you awaken with nothing but a rusty shovel and a pounding heart. In Haunted Hole, a chilling first-person horror game, you must dig your way out of your own grave and uncover the terrifying truth.  💀🔥</p>
-                <p>Explore a procedurally generated graveyard, dig up graves for tools and clues (and terrors), and manage your limited stamina while lurking pixelated horrors add to the suspense. Can you escape the haunted hole before it claims your soul? 😈</p>
+         <div class="section">
+             <h2 class="glitch">Featured Project: Haunted Hole 🎮🪦</h2>
 
-                <h3>Features:</h3>
-                <ul>
-                    <li>Pixelated horror graphics for a retro, spooky vibe</li>
-                    <li>Procedurally generated graveyard for unique playthroughs</li>
-                    <li>Creepy sound effects</li>
-                    <li>Multiple endings</li>
-                    <li>Digging mechanics that unearth both clues and terrors</li>
-                    <li>Mobile Controller</li>
-                </ul>
+             <div class="game-description">
+                 <p>Buried alive in a creepy, pixelated graveyard, you awaken with nothing but a rusty shovel and a pounding heart. In Haunted Hole, a chilling first-person horror game, you must dig your way out of your own grave and uncover the terrifying truth. 💀🔥</p>
+                 <p>Explore a procedurally generated graveyard, dig up graves for tools and clues (and terrors), and manage your limited stamina while lurking pixelated horrors add to the suspense. Can you escape the haunted hole before it claims your soul? 😈</p>
+             </div>
 
-                <p>Made for the Beginner's Jam Halloween 2024 using Godot Engine 4. 🎮🔥</p>
-            </div>
 
-            <div class="gallery">
-                <img src="haunted_hole_screenshot_1.jpg" alt="Haunted Hole Screenshot 1">
-                <img src="haunted_hole_screenshot_2.jpg" alt="Haunted Hole Screenshot 2">
-                <img src="haunted_hole_screenshot_3.jpg" alt="Haunted Hole Screenshot 3">
-                <img src="haunted_hole_screenshot_4.jpg" alt="Haunted Hole Screenshot 4">
-            </div>
+             <div class="gallery">
+                 <img src="haunted_hole_screenshot_1.jpg" alt="Haunted Hole Screenshot 1">
+                 <img src="haunted_hole_screenshot_2.jpg" alt="Haunted Hole Screenshot 2">
+                 <img src="haunted_hole_screenshot_3.jpg" alt="Haunted Hole Screenshot 3">
+                 <img src="haunted_hole_screenshot_4.jpg" alt="Haunted Hole Screenshot 4">
+             </div>
 
-            <p><a href="https://bass.itch.io/haunted-hole">Play Haunted Hole on itch.io</a> 🎮</p>
+             <div class="game-info">
+                 <p><strong>Genre:</strong> Adventure, Horror</p>
+                 <p><strong>Platform:</strong> PC, Mobile (Android)</p>
+                 <p><strong>Made for:</strong> Beginner's Jam Halloween 2024</p>
+                 <p><strong>Engine:</strong> Godot Engine 4</p>
+             </div>
 
-        </div>
+             <div class="game-credits">
+                <p><strong>Credits:</strong></p>
+                 <p>Sound Effects: Taira Komori (<a href="https://taira-komori.jpn.org/freesounden.html">https://taira-komori.jpn.org/freesounden.html</a>)</p>
+                 <p>Additional Sound Effects: Vita-chi sozaikan (<a href="http://www.vita-chi.net/sec/voi/hora/english.htm">http://www.vita-chi.net/sec/voi/hora/english.htm</a>)</p>
+                 <p>3D Assets: Loafbrr (<a href="https://loafbrr.itch.io/">https://loafbrr.itch.io/</a>)</p>
+                 <p>Textures: ambientCG.com (<a href="https://ambientcg.com/">https://ambientcg.com/</a>)</p>
+                 <p>VHS Effect: Godot Retro Shader (<a href="https://github.com/ahopness/GodotRetro">https://github.com/ahopness/GodotRetro</a>)</p>
+             </div>
+
+             <a class="download-link glitch" href="https://bass.itch.io/haunted-hole">Play Haunted Hole on itch.io 🎮🔥</a>
+
+         </div>
+
 
 
         <div class="section">
@@ -163,11 +94,9 @@
             <p>I'm also working on other  weird and wonderful projects.  Stay tuned... 💀🔥 </p>
         </div>
 
-
         <div class="skull">
             💀🔥💀🔥💀
         </div>
-
 
     </div>
 
