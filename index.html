@@ -74,25 +74,21 @@
             border-radius: 5px;
             box-shadow: 0 0 10px #0f0;
         }
-
         blockquote {
             border-left: 5px solid #0f0;
             padding-left: 20px;
             margin-left: 20px;
             font-style: italic;
         }
-
         .creepy-text {
             font-family: 'Creepster', cursive;
             font-size: 1.2em;
             animation: textFlicker 3s infinite alternate; 
         }
-
         @keyframes textFlicker {
             0% { opacity: 1; }
             100% { opacity: 0.6; } 
         }
-
         .section {
             margin-bottom: 30px; 
         }
@@ -117,27 +113,21 @@
         .game-description { 
             margin-bottom: 20px;
         }
-        .game-description {
-            margin-bottom: 20px;
-        }
-        .game-info { /* Add styles for game info text */
+        .game-info {
             text-align: center;
             margin-top: 10px;
             color: #ccc; /* Lighter text color for game info */
         }
-
         .game-credits {
             text-align: left; /* Align credits to the left */
             margin-top: 20px;
             font-size: 0.8em; /* Slightly smaller font size for credits */
             color: #888; /* Even lighter text color for credits */
         }
-
         .game-credits a {
             color: #0f0; /* Keep link color green */
             text-decoration: none;
         }
-
         .game-credits a:hover {
             text-decoration: underline;
         }
@@ -147,6 +137,64 @@
             margin-top: 20px;  /* Add margin above the link */
             font-size: 1.2em; /* Make the link text larger */
         }
+        #trailer {
+            position: relative;
+            height: 110vh; /* Adjust as needed */
+        }
+        #trailer .embed-responsive {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            overflow: hidden;
+        }
+        #trailer .embed-responsive iframe { /* Style the iframe directly */
+            width: 80vw; /* Use viewport width for responsiveness */
+            height: 45vw; /* Maintain aspect ratio (9/16 = 0.5625) */
+            border: 2px solid #0f0; /* Green border */
+            border-radius: 10px; /* Rounded corners */
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            #trailer .embed-responsive iframe {
+                width: 60vw;
+                height: 33.75vw; /* Maintain aspect ratio */
+            }
+        }
+        @media (min-width: 992px) {
+            #trailer .embed-responsive iframe {
+                width: 50vw;
+                height: 28.125vw; /* Maintain aspect ratio */
+            }
+        }
+        @media (min-width: 1200px) {
+            #trailer .embed-responsive iframe {
+                width: 40vw;
+                height: 22.5vw; /* Maintain aspect ratio */
+            }
+        }
+        .image-container {
+            position: relative;
+            text-align: center; /* Center images in modal */
+        }
+        .navigation-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            border: 2px solid #0f0; /* Green border */
+            color: #0f0; /* Green text color */
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .navigation-arrow:first-child {
+            left: 10px; /* Add some space from the left edge */
+        }
+        .navigation-arrow:last-child {
+            right: 10px; /* Add some space from the right edge */
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
@@ -155,59 +203,54 @@
         };
     </script>
 </head>
-
 <body>
-
     <div class="container">
+        <nav class="menu"> 
+            <ul>  
+                <li><a href="#portfolio" class="glitch">💀 Portfolio</a></li>
+                <li><a href="#trailer" class="glitch">🔥 Trailer</a></li>
+                <li><a href="#about" class="glitch">👽 About Me / Contact</a></li> 
+            </ul>
+        </nav>
         <h1 class="glitch">Bass's Digital Graveyard 💀🔥</h1>
-
-        <p>Yo! Bass here. 💀🔥  Welcome to my digital graveyard. I'm a game dev, AI enthusiast, and all-around weird guy.  😎 This is where my creations come to life (or undeath).  🎮🤖👻
-
-         <div class="section">
-             <h2 class="glitch">Featured Project: Haunted Hole 🎮🪦</h2>
-
-             <div class="game-description">
-                 <p>Buried alive in a creepy, pixelated graveyard, you awaken with nothing but a rusty shovel and a pounding heart. In Haunted Hole, a chilling first-person horror game, you must dig y
-                 <p>Explore a procedurally generated graveyard, dig up graves for tools and clues (and terrors), and manage your limited stamina while lurking pixelated horrors add to the suspense. Ca
-             </div>
-
-             <div class="gallery">
-                 <img src="haunted_hole_screenshot_1.jpg" alt="Haunted Hole Screenshot 1">
-                 <img src="haunted_hole_screenshot_2.jpg" alt="Haunted Hole Screenshot 2">
-                 <img src="haunted_hole_screenshot_3.jpg" alt="Haunted Hole Screenshot 3">
-                 <img src="haunted_hole_screenshot_4.jpg" alt="Haunted Hole Screenshot 4">
-             </div>
-
-             <div class="game-info">
-                 <p><strong>Genre:</strong> Adventure, Horror</p>
-                 <p><strong>Platform:</strong> PC, Mobile (Android)</p>
-                 <p><strong>Made for:</strong> Beginner's Jam Halloween 2024</p>
-                 <p><strong>Engine:</strong> Godot Engine 4</p>
-             </div>
-
-             <div class="game-credits">
-                <p><strong>Credits:</strong></p>
-                 <p>Sound Effects: Taira Komori (<a href="https://taira-komori.jpn.org/freesounden.html">https://taira-komori.jpn.org/freesounden.html</a>)</p>
-                 <p>Additional Sound Effects: Vita-chi sozaikan (<a href="http://www.vita-chi.net/sec/voi/hora/english.htm">http://www.vita-chi.net/sec/voi/hora/english.htm</a>)</p>
-                 <p>3D Assets: Loafbrr (<a href="https://loafbrr.itch.io/">https://loafbrr.itch.io/</a>)</p>
-                 <p>Textures: ambientCG.com (<a href="https://ambientcg.com/">https://ambientcg.com/</a>)</p>
-                 <p>VHS Effect: Godot Retro Shader (<a href="https://github.com/ahopness/GodotRetro">https://github.com/ahopness/GodotRetro</a>)</p>
-             </div>
-
-             <a class="download-link glitch" href="https://minmostwhatthemeaning.itch.io/haunted-hole-game-jam">Play Haunted Hole on itch.io 🎮🔥</a>
-
-         </div>
-
-        <div class="section">
-            <h2>Other Projects</h2>
-            <p>I'm also working on other  weird and wonderful projects.  Stay tuned... 💀🔥 </p>
+        <p>Yo! Bass here. 💀🔥 Welcome to my digital graveyard. I'm a game dev, AI enthusiast, and all-around weird guy. 😎 This is where my creations come to life (or undeath). 🎮🤖👻</p>
+        <div class="section" id="portfolio">
+            <h2><span class="retro-text">💀🔥 Portfolio 🔥💀</span></h2>
+            <h3>Haunted Hole</h3>
+            <p>Buried alive. Rusty shovel. Pounding heart. Dig your way out and uncover the terrifying truth.  💀🔥</p>
+            <div class="gallery">
+                <img src="haunted_hole_screenshot_1.jpg" alt="Haunted Hole Screenshot 1">
+                <img src="haunted_hole_screenshot_2.jpg" alt="Haunted Hole Screenshot 2">
+                <img src="haunted_hole_screenshot_3.jpg" alt="Haunted Hole Screenshot 3">
+                <img src="haunted_hole_screenshot_4.jpg" alt="Haunted Hole Screenshot 4">
+            </div>
+            <a class="download-link glitch" href="#">Play Haunted Hole on itch.io 🎮🔥</a>  <!-- Update Link -->
+            <div class="game-credits"> 
+                <p><strong>Genre:</strong> Pixel Horror, Survival</p>
+                <p><strong>Engine:</strong> Godot 4</p>
+            </div>
+            <h3>AI Chatbot: Da(AI)</h3>
+            <p>My digital companion in the making.  She's learning to be more human than human.  😈🔥🤖</p>
+            <h3>[Project 3 Name]</h3>
+            <p>[Project 3 Description]</p>
+            <img src="project3_image.jpg" alt="[Project 3 Image]">
         </div>
-
+        <div class="section" id="trailer">
+            <h2><span class="retro-text">🔥💀 Trailer 💀🔥</span></h2>
+            <p>Watch the Haunted Hole trailer:</p>
+            <!-- Centered YouTube Video Embed -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+            </div>
+        </div>
+        <div class="section" id="about">
+            <h2 class="glitch">👽 About Me / Contact 💀🔥</h2>
+            <p>Yo, I'm Bass. 💀🔥 I'm into game dev, AI, creepy stuff, and pushing the boundaries of reality. I'm building my own digital world, one line of code at a time. 🎮🤖👻</p>
+            <p>Hit me up if you're into the same weird shit: bass.the.mad.scientist@proton.me</p>  <!-- Update Email -->
+        </div>
         <div class="skull">
             💀🔥💀🔥💀
         </div>
-
     </div>
-
 </body>
 </html>
