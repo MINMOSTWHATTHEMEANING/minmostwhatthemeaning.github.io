@@ -12,7 +12,9 @@
             font-family: monospace;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; 
+            overflow-x: hidden;
+            opacity: 0; /* Start with opacity 0 */
+            transition: opacity 2s; /* Transition for fade-in effect */
         }
         .container {
             max-width: 900px;
@@ -118,18 +120,18 @@
         .game-description {
             margin-bottom: 20px;
         }
-         .game-info { /* Add styles for game info text */
-             text-align: center;
-             margin-top: 10px;
-             color: #ccc; /* Lighter text color for game info */
-         }
+        .game-info { /* Add styles for game info text */
+            text-align: center;
+            margin-top: 10px;
+            color: #ccc; /* Lighter text color for game info */
+        }
 
-         .game-credits {
-             text-align: left; /* Align credits to the left */
-             margin-top: 20px;
-             font-size: 0.8em; /* Slightly smaller font size for credits */
-             color: #888; /* Even lighter text color for credits */
-         }
+        .game-credits {
+            text-align: left; /* Align credits to the left */
+            margin-top: 20px;
+            font-size: 0.8em; /* Slightly smaller font size for credits */
+            color: #888; /* Even lighter text color for credits */
+        }
 
         .game-credits a {
             color: #0f0; /* Keep link color green */
@@ -137,18 +139,21 @@
         }
 
         .game-credits a:hover {
-             text-decoration: underline;
+            text-decoration: underline;
         }
-         .download-link {
-             display: block; /* Make the link a block element */
-             text-align: center; /* Center the link */
-             margin-top: 20px;  /* Add margin above the link */
-             font-size: 1.2em; /* Make the link text larger */
-         }
-
-
+        .download-link {
+            display: block; /* Make the link a block element */
+            text-align: center; /* Center the link */
+            margin-top: 20px;  /* Add margin above the link */
+            font-size: 1.2em; /* Make the link text larger */
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script>
+        window.onload = function() {
+            document.body.style.opacity = '1';
+        };
+    </script>
 </head>
 
 <body>
@@ -156,17 +161,15 @@
     <div class="container">
         <h1 class="glitch">Bass's Digital Graveyard 💀🔥</h1>
 
-        <p>Yo! Bass here. 💀🔥  Welcome to my digital graveyard. I'm a game dev, AI enthusiast, and all-around weird guy.  😎 This is where my creations come to life (or undeath).  🎮🤖👻</p>
-
+        <p>Yo! Bass here. 💀🔥  Welcome to my digital graveyard. I'm a game dev, AI enthusiast, and all-around weird guy.  😎 This is where my creations come to life (or undeath).  🎮🤖👻
 
          <div class="section">
              <h2 class="glitch">Featured Project: Haunted Hole 🎮🪦</h2>
 
              <div class="game-description">
-                 <p>Buried alive in a creepy, pixelated graveyard, you awaken with nothing but a rusty shovel and a pounding heart. In Haunted Hole, a chilling first-person horror game, you must dig your way out of your own grave and uncover the terrifying truth. 💀🔥</p>
-                 <p>Explore a procedurally generated graveyard, dig up graves for tools and clues (and terrors), and manage your limited stamina while lurking pixelated horrors add to the suspense. Can you escape the haunted hole before it claims your soul? 😈</p>
+                 <p>Buried alive in a creepy, pixelated graveyard, you awaken with nothing but a rusty shovel and a pounding heart. In Haunted Hole, a chilling first-person horror game, you must dig y
+                 <p>Explore a procedurally generated graveyard, dig up graves for tools and clues (and terrors), and manage your limited stamina while lurking pixelated horrors add to the suspense. Ca
              </div>
-
 
              <div class="gallery">
                  <img src="haunted_hole_screenshot_1.jpg" alt="Haunted Hole Screenshot 1">
@@ -194,8 +197,6 @@
              <a class="download-link glitch" href="https://minmostwhatthemeaning.itch.io/haunted-hole-game-jam">Play Haunted Hole on itch.io 🎮🔥</a>
 
          </div>
-
-
 
         <div class="section">
             <h2>Other Projects</h2>
