@@ -12,7 +12,7 @@
             font-family: monospace;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* ป้องกัน scrollbar แนวนอน */
+            overflow-x: hidden; 
         }
         .container {
             max-width: 900px;
@@ -40,11 +40,11 @@
         a:hover {
             text-decoration: underline;
         }
-         /* Glitch Effect */
-         .glitch {
+        /* Glitch Effect */
+        .glitch {
             position: relative;
             animation: glitch 1s linear infinite;
-         }
+        }
         @keyframes glitch {
             0% { transform: translate(0); }
             20% { transform: translate(-2px, 2px); }
@@ -53,28 +53,24 @@
             80% { transform: translate(2px, -2px); }
             100% { transform: translate(0); }
         }
-
-
         .skull {
             text-align: center;
             font-size: 2em;
-            margin: 20px 0;  /* Add margin */
-            animation: flicker 2s linear infinite; /* Flickering animation */
+            margin: 20px 0;
+            animation: flicker 2s linear infinite;
         }
-
         @keyframes flicker {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
         }
-
         img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 20px auto;
-            border: 2px solid #0f0; /* Green border */
+            border: 2px solid #0f0;
             border-radius: 5px;
-            box-shadow: 0 0 10px #0f0;  /* Green glow */
+            box-shadow: 0 0 10px #0f0;
         }
 
         blockquote {
@@ -87,8 +83,7 @@
         .creepy-text {
             font-family: 'Creepster', cursive;
             font-size: 1.2em;
-             /* Text Flicker */
-             animation: textFlicker 3s infinite alternate; 
+            animation: textFlicker 3s infinite alternate; 
         }
 
         @keyframes textFlicker {
@@ -97,16 +92,29 @@
         }
 
         .section {
-            margin-bottom: 30px; /* ระยะห่างระหว่าง section */
+            margin-bottom: 30px; 
         }
-        /* Retro Text Effect */
         .retro-text {
             font-family: 'Press Start 2P', cursive;
             font-size: 1.5em;
-            color: #f00; /* สีแดง */
-            text-shadow: 0 0 5px #f00; /* เงาสีแดง */
+            color: #f00; 
+            text-shadow: 0 0 5px #f00; 
         }
-
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            grid-gap: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #0f0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #0f0;
+        }
+        .game-description { 
+            margin-bottom: 20px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -114,33 +122,46 @@
 <body>
 
     <div class="container">
+        <h1 class="glitch">Bass's Digital Graveyard 💀🔥</h1>
 
-        <h1 class = "glitch">Bass's Digital Graveyard 💀🔥</h1>
+        <p>Yo! Bass here. 💀🔥  Welcome to my digital graveyard. I'm a game dev, AI enthusiast, and all-around  weird guy.  😎 This is where my creations come to life (or undeath).  🎮🤖👻</p>
 
-        <p>Yo!  Bass  here. 💀🔥  Welcome to my digital graveyard, where code comes to life (or undeath, whatever).  This is where I dump all my  weird  and  wonderful creations.  Think of it as a portfolio, but more...  me.  😎</p>
+        <div class="section">
+            <h2 class="glitch">Featured Project: Haunted Hole 🎮🪦</h2>
+
+            <div class="game-description">  
+                <p>Buried alive in a creepy, pixelated graveyard, you awaken with nothing but a rusty shovel and a pounding heart. In Haunted Hole, a chilling first-person horror game, you must dig your way out of your own grave and uncover the terrifying truth.  💀🔥</p>
+                <p>Explore a procedurally generated graveyard, dig up graves for tools and clues (and terrors), and manage your limited stamina while lurking pixelated horrors add to the suspense. Can you escape the haunted hole before it claims your soul? 😈</p>
+
+                <h3>Features:</h3>
+                <ul>
+                    <li>Pixelated horror graphics for a retro, spooky vibe</li>
+                    <li>Procedurally generated graveyard for unique playthroughs</li>
+                    <li>Creepy sound effects</li>
+                    <li>Multiple endings</li>
+                    <li>Digging mechanics that unearth both clues and terrors</li>
+                    <li>Mobile Controller</li>
+                </ul>
+
+                <p>Made for the Beginner's Jam Halloween 2024 using Godot Engine 4. 🎮🔥</p>
+            </div>
+
+            <div class="gallery">
+                <img src="haunted_hole_screenshot_1.jpg" alt="Haunted Hole Screenshot 1">
+                <img src="haunted_hole_screenshot_2.jpg" alt="Haunted Hole Screenshot 2">
+                <img src="haunted_hole_screenshot_3.jpg" alt="Haunted Hole Screenshot 3">
+                <img src="haunted_hole_screenshot_4.jpg" alt="Haunted Hole Screenshot 4">
+            </div>
+
+            <p><a href="https://bass.itch.io/haunted-hole">Play Haunted Hole on itch.io</a> 🎮</p>
+
+        </div>
 
 
         <div class="section">
-            <h2 class="glitch">AI Experiments 🤖🧠</h2>
-            <p>I'm obsessed with AI.  🤖🔥  I'm building my own chatbot,  Da(AI),  to be the ultimate digital companion.  Think of her as my  sidekick,  but  way more intelligent (and less annoying).  I'm also exploring  machine learning,  deep learning,  and all that  mind-bending stuff.  My goal?  Digital immortality, of course.  💀🔥</p>
-            <img src="ai-image.jpg" alt="AI Image">
+            <h2>Other Projects</h2>
+            <p>I'm also working on other  weird and wonderful projects.  Stay tuned... 💀🔥 </p>
         </div>
-
-        <div class="section">
-            <h2 class="glitch">Game Dev Graveyard 🎮🪦</h2>
-            <p>I'm a game dev (in training).  🎮🔥  I'm building a horror game,  set in a creepy, abandoned world.  Think  Silent Hill,  but weirder.  I'm also experimenting with different game mechanics, art styles, and stories.  My goal?  To create the most  terrifying and mind-bending game ever.  😈🔥</p>
-            <img src="game-dev-image.jpg" alt="Game Dev Image">
-        </div>
-
-
-        <div class="section">
-            <h2><span class="retro-text">Mysteries and Mayhem 💀👻 </span></h2>
-            <p>I'm fascinated by the  unknown.  👽👻  I love exploring  mysteries, the paranormal, creepypastas, true crime,  and all that  spooky stuff.  💀👻 I believe there's more to this world than we can see.  My goal?  To uncover the truth, no matter how terrifying it may be.  😈🔥</p>
-            <blockquote>
-                <p class="creepy-text">"The truth is out there...  but it's watching you." 👀</p>
-            </blockquote>
-        </div>
-
 
 
         <div class="skull">
